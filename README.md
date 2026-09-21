@@ -1,4 +1,4 @@
-# コードリーフ — 利用ガイド
+# コードリーフ — Salesforce開発を、手を動かして学ぶ
 
 Windowsで使える、Salesforce開発の学習アプリです。「説明を読む → コードを書く → 実行結果を確認する」の順に学習します。
 
@@ -8,14 +8,14 @@ Windowsで使える、Salesforce開発の学習アプリです。「説明を読
 
 **[最新版をダウンロード（codeleaf-windows.zip）](https://github.com/cfn0eft/codeleaf-downloads/releases/latest/download/codeleaf-windows.zip)**
 
-[最新の変更内容](https://github.com/cfn0eft/codeleaf-downloads/releases/latest) ／ [詳しい導入手順（SETUP.md）](https://github.com/cfn0eft/codeleaf-downloads/releases/latest/download/SETUP.md)
+[最新の変更内容](https://github.com/cfn0eft/codeleaf-downloads/releases/latest) ／ [詳しい利用ガイド（PDF）](https://github.com/cfn0eft/codeleaf-downloads/releases/latest/download/CODELEAF_USER_GUIDE.pdf) ／ [SETUP.md](https://github.com/cfn0eft/codeleaf-downloads/releases/latest/download/SETUP.md)
 
 - 初めて使う方は、上の本体ZIPを取得してください。本体は約1MiBです。
 - 初回の準備で、採点に必要なファイル約17.7MiBを自動取得します。`codeleaf-dependencies.zip`を手動で展開する必要はありません。
 - **0.1.6以降をお使いの方は、アプリ内から更新できます。** 下の「アップデート」を参照してください。
 - GitHubの「Source code (zip)」は起動用ではありません。`codeleaf-windows.zip`を使用してください。
 
-## 1. 必要なものを確認する
+## 1. 動作に必要なもの
 
 | 必要なもの | 用途 |
 | --- | --- |
@@ -27,20 +27,20 @@ Windowsで使える、Salesforce開発の学習アプリです。「説明を読
 | 学習専用のSalesforce Developer Edition | Salesforce課題の実行先 |
 | Git for Windows（任意） | Git演習を行う場合に使用 |
 
-不足しているソフトの公式ダウンロード先は、次の準備画面から開けます。会社PCでは会社指定の導入手順に従ってください。
+不足しているソフトがある場合は、起動時に公式ダウンロード先を案内します。会社PCでは会社指定の導入手順に従ってください。
 
 ## 2. 初回の準備と起動
 
 1. 本体ZIPを右クリックして**「すべて展開」**します。保存・書き込みができる新しいフォルダーを選んでください。
-2. 展開先の **「必要環境を確認.bat」** を開きます。初回は採点用ファイルの取得・検証・展開が終わるまで待ちます。
-3. 「コードリーフの準備」画面で結果を確認します。不足があれば公式ページから導入し、BATをもう一度開いてください。
-4. **「コードリーフを起動.bat」** を開きます。ブラウザで学習画面が表示されます。
+2. 展開先の **「コードリーフを起動.bat」** を開きます。
+3. 初回は必要なPC環境を自動確認し、採点用ファイルを取得・検証・展開します。不足があれば案内に従い、導入後に同じBATを開き直してください。
+4. 準備が終わると、ブラウザで学習画面が表示されます。
 
 ブラウザが開かなければ、起動後に **http://127.0.0.1:4317/** を開いてください。これは起動したPC内のアプリに接続するアドレスです。
 
-準備画面ではNode.js、Salesforce CLI、ブラウザを確認します。0.1.7以降はGitも実行してバージョンを表示します。Gitが未導入・起動失敗でも、Git演習以外の学習は利用できます。
+起動時にNode.js、Salesforce CLI、ブラウザを確認します。Gitも実行してバージョンを表示しますが、未導入・起動失敗でもGit演習以外の学習は利用できます。
 
-**起動中の黒いウィンドウは、アプリの使用中は開いたままにしてください。** ZIPの中から直接起動せず、展開したフォルダーのBATを使います。
+起動ウィンドウには準備の進み具合、ローカルURL、終了方法を見やすく表示します。**アプリの使用中は開いたままにしてください。** ZIPの中から直接起動せず、展開したフォルダーのBATを使います。
 
 ## 3. Salesforceの学習用組織を接続する
 
@@ -97,12 +97,12 @@ Windowsで使える、Salesforce開発の学習アプリです。「説明を読
 | 「ポート4317が使用中」と表示される | まず http://127.0.0.1:4317/ を開き、起動中のコードリーフを確認します。別フォルダーの版に切り替える場合は、その起動ウィンドウでCtrl+Cを押して終了後、使いたい版を起動します。 |
 | 「別のコードリーフが起動しています」と表示される | 案内の「起動中のコードリーフを開く」を押します。0.1.6以降なら、その画面からアプリ内更新できます。 |
 | 初回のダウンロードが失敗する | 通信状態を確認し、同じBATを再実行してください。会社の通信制限がある場合は、表示されたエラー分類をIT担当者へ伝えてください。 |
-| ソフトを導入したのに未確認・未導入のまま | 「必要環境を確認.bat」を開き直します。準備画面を開いたままなら再読み込みしてください。 |
+| ソフトを導入したのに未確認・未導入のまま | 「コードリーフを起動.bat」を開き直します。案内画面を開いたままなら再読み込みしてください。 |
 | Gitの起動確認に失敗する | Git for Windowsの導入状態と実行制限を確認して、準備を再実行します。Git演習以外は利用できます。 |
 | 更新を確認できない | 今の版で学習を続けられます。接続を確認して「更新を確認」から再試行してください。 |
 | アプリは開くが原因が分からない | 「環境・バックアップ」→「問題報告用の診断情報」で診断を作成し、内容を確認してコピーできます。 |
 
-詳しい手順は **[最新版のSETUP.md](https://github.com/cfn0eft/codeleaf-downloads/releases/latest/download/SETUP.md)**、変更内容は **[Release一覧](https://github.com/cfn0eft/codeleaf-downloads/releases)** を参照してください。
+画面付きで読める手順は **[詳しい利用ガイド（PDF）](https://github.com/cfn0eft/codeleaf-downloads/releases/latest/download/CODELEAF_USER_GUIDE.pdf)**、補足は **[SETUP.md](https://github.com/cfn0eft/codeleaf-downloads/releases/latest/download/SETUP.md)**、変更内容は **[Release一覧](https://github.com/cfn0eft/codeleaf-downloads/releases)** を参照してください。
 
 ## このアプリについて
 
